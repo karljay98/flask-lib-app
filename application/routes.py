@@ -1,8 +1,9 @@
 from application import app, db
-from application.forms import TaskForm
-from application.models import Tasks
+from application.forms import LibraryForm
+from application.models import Library
 from flask import render_template, request, redirect, url_for
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    form = LibraryForm()
+    return render_template('index.html', form = form)
