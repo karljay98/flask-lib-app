@@ -1,6 +1,6 @@
 from application import app, db
-from application.forms import LibraryForm
-from application.models import Library
+from application.forms import LibraryForm, BookForm
+from application.models import Library, Book
 from flask import render_template, request, redirect, url_for
 
 @app.route('/', methods = ['GET', 'POST'])
