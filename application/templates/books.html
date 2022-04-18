@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2> Add a book to a library</h2>
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    {{ form.title.label}}: {{ form.title }}
+    {{ form.author.label}}: {{ form.author }}
+    {{ form.genre.label}}: {{ form.genre }}
+    {{ form.library_name.label}}: {{ form.library_name }}
+    {{ form.submit }}
+</form>
+
+
+{% endblock body %}
